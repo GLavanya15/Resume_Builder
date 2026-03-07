@@ -1,101 +1,98 @@
-import Image from "next/image";
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { Rocket, Zap, Target, FileText } from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col min-h-screen bg-background">
+      {/* Simple Header */}
+      <header className="px-6 py-4 flex items-center justify-between border-b border-primary/10 bg-background/50 backdrop-blur-md sticky top-0 z-50">
+        <div className="flex items-center gap-2">
+          <Rocket className="h-6 w-6 text-primary" />
+          <span className="text-xl font-bold tracking-tight">AI Resume Maker</span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className="flex gap-4">
+          <Link href="/login">
+            <Button variant="ghost" className="font-medium hover:text-primary">Log in</Button>
+          </Link>
+          <Link href="/signup">
+            <Button className="font-medium bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm">Sign Up</Button>
+          </Link>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative pt-16 pb-32 overflow-hidden">
+        <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+        <div className="container px-4 mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            Craft your perfect ATS-friendly resume in minutes.
+          </h1>
+          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto italic">
+            Input your details and let our AI summarize, format, and optimize your resume to stand out to recruiters and pass ATS systems with ease.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/dashboard/create">
+              <Button size="lg" className="px-8 bg-primary hover:bg-primary/90 text-lg shadow-xl shadow-primary/20">
+                Build My Resume
+              </Button>
+            </Link>
+            <Link href="/dashboard">
+              <Button size="lg" variant="outline" className="px-8 border-primary/20 hover:bg-primary/5 text-lg">
+                View Dashboard
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-card/50 border-y border-primary/10">
+        <div className="container px-4 mx-auto">
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="flex flex-col items-center text-center p-6 rounded-2xl border border-primary/10 bg-background/50">
+              <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary">
+                <Zap className="h-8 w-8" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Lightning Fast</h3>
+              <p className="text-muted-foreground">
+                Fill out our multi-step form and generate a comprehensive resume instantly with the help of powerful AI models.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center p-6 rounded-2xl border border-primary/10 bg-background/50">
+              <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary">
+                <Target className="h-8 w-8" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">ATS-Optimized</h3>
+              <p className="text-muted-foreground">
+                The AI ensures your resume uses the right keywords and structure to pass Applicant Tracking Systems.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center p-6 rounded-2xl border border-primary/10 bg-background/50">
+              <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary">
+                <FileText className="h-8 w-8" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Beautiful Exports</h3>
+              <p className="text-muted-foreground">
+                View your beautiful new resume right in the browser and effortlessly print to PDF with clean styling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 border-t border-primary/10">
+        <div className="container px-4 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-2">
+            <Rocket className="h-6 w-6 text-primary" />
+            <span className="text-xl font-bold">AI Resume Maker</span>
+          </div>
+          <p className="text-muted-foreground italic">
+            © 2026 AI Resume Maker. Made with 🚀
+          </p>
+        </div>
       </footer>
     </div>
-  );
+  )
 }
