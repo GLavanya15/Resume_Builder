@@ -34,6 +34,7 @@ The application uses AI to analyze the provided information and generate a clean
 - Git & GitHub
 
 ---
+Checkout the deployed web application : https://resumebuilderai-eight.vercel.app
 
 ## ⚙️ Environment Variables
 
@@ -96,12 +97,9 @@ Deployment process:
 
 ## 📌 Future Improvements
 
-- Resume PDF download
 - Multiple resume templates
 - Resume editing feature
 - AI suggestions for improving resumes
-- User authentication dashboard
-
 ---
 
 ## 💡 Contributions & Suggestions
