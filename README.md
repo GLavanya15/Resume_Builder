@@ -34,8 +34,23 @@ The application uses AI to analyze the provided information and generate a clean
 - Git & GitHub
 
 ---
-**Checkout the deployed web application** : https://resumebuilderai-eight.vercel.app
+
+## 🧰 Development Tools
+
+This project was developed with the help of modern AI-assisted development tools.
+
+- **Antigravity** – Used to scaffold and accelerate development of the full-stack application.
+- **Next.js** – Framework used to build the frontend and backend API routes.
+- **Supabase** – Provides database and authentication services.
+- **OpenRouter** – Enables AI-powered resume generation.
+- **Vercel** – Used for hosting and deployment.
+
 ---
+
+**Checkout the deployed web application** : https://resumebuilderai-eight.vercel.app
+
+---
+
 ## ⚙️ Environment Variables
 
 Create a `.env.local` file and add the following variables:
