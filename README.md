@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📄 AI Resume Builder
 
-## Getting Started
+AI Resume Builder is a web application that helps users generate professional, ATS-friendly resumes instantly using Artificial Intelligence. The platform allows users to input their skills, education, experience, and projects, and automatically converts this information into a structured resume.
 
-First, run the development server:
+The application uses AI to analyze the provided information and generate a clean, professional resume format suitable for job applications.
+
+---
+
+## 🚀 Features
+
+- 🤖 **AI-Powered Resume Generation** – Automatically generates resumes using AI.
+- 📄 **Professional Resume Structure** – Creates resumes with sections like summary, skills, education, experience, and projects.
+- 💾 **Database Storage** – Generated resumes are stored securely in the database.
+- ⚡ **Fast Web Interface** – Built with modern web technologies for smooth performance.
+- 🌐 **Cloud Deployment** – Hosted on Vercel for easy access.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Next.js  
+- React  
+- JavaScript  
+
+### Backend & APIs
+- Supabase (Database & Authentication)  
+- OpenRouter API (AI model integration)
+
+### Deployment
+- Vercel  
+
+### Version Control
+- Git & GitHub
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file and add the following variables:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=https:https://esfwrnaqimzejcxsuxna.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVzZndybmFxaW16ZWpjeHN1eG5hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI4NTE0NDksImV4cCI6MjA4ODQyNzQ0OX0.VSnB3E3IGu57duQL6A0EVaGYg1gMQrBHNYhKRP8hia0
+OPENROUTER_API_KEY=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
+```
+
+---
+
+## ▶️ Running the Project Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/GLavanya15/Resume_Builder.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd Resume_Builder
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌍 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The application is deployed using **Vercel**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deployment process:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push code to GitHub  
+2. Import repository into Vercel  
+3. Add environment variables  
+4. Deploy the project  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📌 Future Improvements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Resume PDF download
+- Multiple resume templates
+- Resume editing feature
+- AI suggestions for improving resumes
+- User authentication dashboard
+
+---
+
+## 💡 Contributions & Suggestions
+
+Contributions, suggestions, and improvements are always welcome!
+
+If you have ideas to improve this project, feel free to:
+
+- Open an **Issue** to suggest a feature or report a bug
+- Submit a **Pull Request** with improvements
+- Share feedback on how the project can be enhanced
+
+Your feedback helps make this project better. 🚀
