@@ -34,8 +34,8 @@ The application uses AI to analyze the provided information and generate a clean
 - Git & GitHub
 
 ---
-Checkout the deployed web application : https://resumebuilderai-eight.vercel.app
-
+**Checkout the deployed web application** : https://resumebuilderai-eight.vercel.app
+---
 ## ⚙️ Environment Variables
 
 Create a `.env.local` file and add the following variables:
