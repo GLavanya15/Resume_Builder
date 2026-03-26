@@ -47,7 +47,7 @@ This project was developed with the help of modern AI-assisted development tools
 
 ---
 
-**Checkout the deployed web application** : https://resumebuilderai-eight.vercel.app
+**Checkout the deployed web application** : [https://resumebuilder-nine-kappa.vercel.app/](https://resumebuilder-nine-kappa.vercel.app/)
 
 ---
 
